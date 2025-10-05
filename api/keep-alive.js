@@ -7,9 +7,9 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 export default async function handler(req, res) {
   try {
     // !!! အရေးကြီး: 'your_table_name' နေရာမှာ သင့် Supabase DB ထဲက table နာမည် အမှန်ကို ပြောင်းထည့်ပါ
-    moon_data
+    
     const { error, count } = await supabase
-      .from('your_table_name')
+      .from('moon_data')
       .select('*', { count: 'exact', head: true });
 
     if (error) {
